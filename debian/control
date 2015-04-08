@@ -1,7 +1,16 @@
 Source: gpyfft
 Priority: extra
 Maintainer: Jerome Kieffer <jerome.kieffer@esrf.fr>
-Build-Depends: debhelper (>= 9), python-setuptools (>= 0.6b3), python-all-dev (>= 2.6.6-3), clfft-dev
+Build-Depends: debhelper (>= 9), 
+               python-setuptools (>= 0.6b3), 
+               python-all-dev (>= 2.6.6-3), 
+               clfft-dev, 
+               dh-python,
+               python-all
+#               python3-all,
+#               python3-all-dev, 
+X-Python-Version: >= 2.6
+#X-Python3-Version: >= 3.2
 Standards-Version: 3.9.3
 Section: python
 Homepage: https://github.com/geggo/gpyfft
@@ -28,25 +37,25 @@ Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
  (for single precision, accurate math, inplace, transform size 1024x1024, batch 
  size 4, on AMD Cayman, HD6950).
 
-Package: python3-gpyfft
-Section: python
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, clfft2, python3-pyopencl
-Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
- AMD has created a nice FFT library for use with their OpenCL implementation 
- called clFFT which has been released as open source (Apache 2.0 license)
- .
- This python wrapper is designed to tightly integrate with pyopencl. It 
- consists of a low-level cython based wrapper with an interface similar 
- to the underlying C library. On top of that it offers a high-level interface 
- designed to work on data contained in instances of pyopencl.array.Array, a 
- numpy work-alike array class. The high-level interface is similar to that of 
- pyFFTW, a python wrapper for the FFTW library.
- .
- Compared to pyfft, a python implementation of Apple's FFT library, AMD's FFT 
- library offers some additional features such as transform sizes that are powers 
- of 2, 3 and 5, and real-to-complex transforms. And on AMD hardware a better 
- performance can be expected, e.g., gpyfft: 280 Gflops compared to pyfft: 63 GFlops 
- (for single precision, accurate math, inplace, transform size 1024x1024, batch 
- size 4, on AMD Cayman, HD6950).
+#Package: python3-gpyfft
+#Section: python
+#Architecture: any
+#Depends: ${shlibs:Depends}, ${misc:Depends}, clfft2, python3-pyopencl
+#Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
+# AMD has created a nice FFT library for use with their OpenCL implementation 
+# called clFFT which has been released as open source (Apache 2.0 license)
+# .
+# This python wrapper is designed to tightly integrate with pyopencl. It 
+# consists of a low-level cython based wrapper with an interface similar 
+# to the underlying C library. On top of that it offers a high-level interface 
+# designed to work on data contained in instances of pyopencl.array.Array, a 
+# numpy work-alike array class. The high-level interface is similar to that of 
+# pyFFTW, a python wrapper for the FFTW library.
+# .
+# Compared to pyfft, a python implementation of Apple's FFT library, AMD's FFT 
+# library offers some additional features such as transform sizes that are powers 
+# of 2, 3 and 5, and real-to-complex transforms. And on AMD hardware a better 
+# performance can be expected, e.g., gpyfft: 280 Gflops compared to pyfft: 63 GFlops 
+# (for single precision, accurate math, inplace, transform size 1024x1024, batch 
+# size 4, on AMD Cayman, HD6950).
  

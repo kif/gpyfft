@@ -9,9 +9,16 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+export PYBUILD_NAME = gpyfft
+
 %:
-	dh $@ --with python2 --with python3
+	dh $@ --with python2 --buildsystem=pybuild
+#,python3 
+
 
 override_dh_clean:	
 	dh_clean
-	rm -rf gpyfft/*.c
+	rm -rf gpyfft/*.c gpyfft/*.pyc
+
+override_dh_auto_test:
+	echo "By-passing tests"
