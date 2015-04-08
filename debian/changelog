@@ -1,0 +1,5 @@
+gpyfft (0.2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Jerome Kieffer <jerome.kieffer@esrf.fr>  Wed, 08 Apr 2015 14:24:02 +0200
