@@ -9,7 +9,7 @@ Homepage: https://github.com/geggo/gpyfft
 Package: python-gpyfft
 Section: python
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, clfft, python-pyopencl
+Depends: ${shlibs:Depends}, ${misc:Depends}, clfft2, python-pyopencl
 Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
  AMD has created a nice FFT library for use with their OpenCL implementation 
  called clFFT which has been released as open source (Apache 2.0 license)
@@ -31,7 +31,7 @@ Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
 Package: python3-gpyfft
 Section: python
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, clfft, python3-pyopencl
+Depends: ${shlibs:Depends}, ${misc:Depends}, clfft2, python3-pyopencl
 Description: A Python wrapper for the OpenCL FFT library clFFT by AMD
  AMD has created a nice FFT library for use with their OpenCL implementation 
  called clFFT which has been released as open source (Apache 2.0 license)
